@@ -2,15 +2,18 @@ package jp.cloudii.fn.word;
 
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fnproject.fn.api.FnFeature;
 import com.fnproject.fn.api.flow.Flow;
 import com.fnproject.fn.api.flow.FlowFuture;
 import com.fnproject.fn.api.flow.Flows;
+import com.fnproject.fn.runtime.flow.FlowFeature;
 
 import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.util.*;
 import java.util.stream.Collectors;
 
+@FnFeature(FlowFeature.class)
 public class WordCount {
 	private ObjectMapper mapper = new ObjectMapper();
 
