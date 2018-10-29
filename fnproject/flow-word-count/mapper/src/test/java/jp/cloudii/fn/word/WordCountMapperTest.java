@@ -15,7 +15,6 @@ public class WordCountMapperTest {
 		String url = getClass().getResource("sample.txt").toString();
 
 		fn.givenEvent()
-				.withMethod("POST")
 				.withBody("{\"url\": \"" + url + "\"}")
 				.enqueue();
 
