@@ -1,0 +1,31 @@
+
+{
+    "apiName":"sampleapi",
+    "apiVersion":"1.0",
+    "apiId":"8508c8ce-e044-4286-9ede-86b63a22e908",
+    "baseUrl":"https://28B030D3C0EB49569CA7214F21002610.uscom-central-1.oraclecloud.com:443",
+    "tokenEndpoint":"https://idcs-205ab027f7da4046816d600ba39a162a.identity.oraclecloud.com/oauth2/v1/token",
+    "backend":{
+        "backendId":"<YOUR_BACKEND_ID>",
+        "backendName":"<YOUR_BACKEND_NAME>",
+        "backendVersion":"<YOUR_BACKEND_VERSION>",
+        "authorization":{
+            "anonymousKey":"<BACKEND_ANONYMOUS_KEY>",
+            "clientId":"<BACKEND_CLIENT_ID>",
+            "clientSecret":"<BACKEND_CLIENT_SECRET>"
+        }
+    },
+    "tools":{
+        "deployment":{
+            "tempDirectory":"c:\\tmp\\mcs-deploy"
+        },
+        "authorization":{
+            "clientId":"<OMCE_TM_APP_CLIENT_ID>",
+            "clientSecret":"<OMCE_TM_APP_CLIENT_SECRET>"
+        }
+    },
+    "container":{
+        "oracleMobileApiName":"OracleMobileAPI",
+        "port":4000
+    }
+}

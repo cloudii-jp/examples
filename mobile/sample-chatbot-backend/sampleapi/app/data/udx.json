@@ -1,0 +1,30 @@
+[
+    {
+        "name": "PRONTO IL BAR",
+        "kind": "western"
+    },
+    {
+        "name": "chiocciol@pizzeria",
+        "kind": "western"
+    },
+    {
+        "name": "須田町食堂",
+        "kind": "western"
+    },
+    {
+        "name": "かむげん",
+        "kind": "japanese"
+    },
+    {
+        "name": "天ぷら ひさご",
+        "kind": "japanese"
+    },
+    {
+        "name": "讃岐うどん伊吹や製麺",
+        "kind": "japanese"
+    },
+    {
+        "name": "盤古殿",
+        "kind": "chinese"
+    }
+]
