@@ -1,7 +1,8 @@
 package jp.cloudii.fn.word;
 
-import com.fnproject.fn.testing.FnFunctionStubBuilder;
 import com.fnproject.fn.testing.FnTestingRule;
+import com.fnproject.fn.testing.flow.FlowTesting;
+import com.fnproject.fn.testing.flow.FnFunctionStubBuilder;
 import org.json.JSONException;
 import org.junit.Rule;
 import org.junit.Test;
@@ -10,18 +11,18 @@ import org.skyscreamer.jsonassert.JSONAssert;
 public class WordCountTest {
 	@Rule
 	public FnTestingRule fn = FnTestingRule.createDefault();
+	private final FlowTesting flowTesting = FlowTesting.create(fn);
 
 	@Test
 	public void count() throws JSONException {
 		String url = getClass().getResource("dummy.txt").toString();
 
 		fn.givenEvent()
-				.withMethod("POST")
 				.withBody("{\"urls\": [\"" + url + "\",\"" + url + "\"]}")
 				.enqueue();
 
 
-		fn.givenFn("./mapper").withAction(dummyAction(url));
+		flowTesting.givenFn("./mapper").withAction(dummyAction(url));
 
 		fn.thenRun(WordCount.class, "handleRequest");
 
@@ -36,12 +37,11 @@ public class WordCountTest {
 		String url = getClass().getResource("dummy.txt").toString();
 
 		fn.givenEvent()
-				.withMethod("POST")
 				.withBody("{\"urls\": [\"" + url + "\",\"" + url + "\"], \"words\": [\"thank\"]}")
 				.enqueue();
 
 
-		fn.givenFn("./mapper").withAction(dummyAction(url));
+		flowTesting.givenFn("./mapper").withAction(dummyAction(url));
 
 		fn.thenRun(WordCount.class, "handleRequest");
 

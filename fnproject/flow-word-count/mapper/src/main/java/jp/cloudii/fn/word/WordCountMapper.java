@@ -1,5 +1,8 @@
 package jp.cloudii.fn.word;
 
+import com.fnproject.fn.api.FnFeature;
+import com.fnproject.fn.runtime.flow.FlowFeature;
+
 import java.io.InputStream;
 import java.io.Serializable;
 import java.net.URL;
@@ -8,6 +11,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
+@FnFeature(FlowFeature.class)
 public class WordCountMapper implements Serializable {
 
 	public Message.MapperResponse handleRequest(Message.MapperRequest request) {
