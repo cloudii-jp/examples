@@ -4,7 +4,7 @@
  * @see {@link http://expressjs.com/3x/api.html#app}
  */ 
 
-const apiURL = '/mobile/custom/sampleapi/components';
+const apiURL = '/mobile/custom/lunch/components';
 
 var shell = require('./shell')();
 

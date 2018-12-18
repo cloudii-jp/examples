@@ -1,8 +1,8 @@
 {
-  "name" : "sampleapi",
-  "version" : "1.0.8",
+  "name" : "lunch",
+  "version" : "1.0.9",
   "description" : "Sample API",
-  "main" : "sampleapi.js",
+  "main" : "lunchapi.js",
   "oracleMobile" : {
     "dependencies" : {
       "apis" : { },
